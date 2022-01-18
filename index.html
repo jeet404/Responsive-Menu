@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='css/main.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="checkBtn">
+        <i class="fa fa-bars"></i>
+    </div>
+    <div class="closeBtn">
+        <i class="fa fa-close"></i>
+    </div>
+    <div class="header header-hide">
+        <div class="logo">
+            <img src="#" alt="test">
+        </div>
+        <ul class="menu">
+            <li><a href="#">Service</a></li>
+            <li><a href="#">How To File</a></li>
+            <li><a href="#">Tax Planning</a></li>
+            <li><a href="#">Calculators</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a id="btn" href="#">Account/Sign In</a></li>
+            <li><a href="#"><img src="images/cart.png" alt="cart"></a></li>
+            <li><a href="#"><img src="images/fav.png" alt=""></a></li>
+        </ul>
+    </div>
+</body>
+
+<!-- for responcive menu -->
+<script>
+    console.log("Script Running.....");
+
+    document.querySelector('.closeBtn').style.display = 'none';
+    document.querySelector('.checkBtn').addEventListener("click", () => {
+        document.querySelector('.header').classList.toggle('header-hide');
+        if (document.querySelector('.header').classList.contains('header-hide')) {
+            document.querySelector('.checkBtn').style.display = 'inline';
+            document.querySelector('.closeBtn').style.display = 'none';
+        }
+        else {
+            document.querySelector('.checkBtn').style.display = 'none';
+            setTimeout(() => {
+                document.querySelector('.closeBtn').style.display = 'inline';
+            }, 350);
+        }
+    })
+</script>
+
+</html>

@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,300&display=swap");
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100vw;
+  height: 10vh;
+  background: whitesmoke;
+  display: flex;
+  transition: transform 0.3s ease-in;
+  align-items: center;
+  overflow: hidden;
+  flex-direction: row;
+  box-shadow: 0px 0px 4px 2px gray;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.header .logo {
+  float: left;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .menu {
+  float: right;
+  width: 75%;
+  padding-left: 15%;
+  display: flex;
+  align-self: center;
+}
+
+.menu li {
+  list-style: none;
+  float: left;
+  margin-left: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 6px;
+  text-decoration: none;
+  font-size: 1em;
+  font-weight: 600;
+  transition: 0.5s;
+}
+
+.menu li a:hover,
+.menu #btn:hover {
+  background: lightgray;
+  border-radius: 20px;
+  transition: 0.5s;
+}
+
+.menu #btn {
+  border-radius: 35px;
+  background-color: rgb(20, 179, 241);
+  transition: 0.5s;
+}
+
+.menu img {
+  height: 30px;
+  width: 30px;
+}
+
+.checkBtn {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 50px;
+  left: 10px;
+  transition: 0.5s;
+}
+
+.closeBtn {
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  top: 36%;
+  left: 10px;
+  transition: 0.5s;
+}
+
+@media (max-width: 380px) {
+  .logo {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .checkBtn,
+  .closeBtn {
+    display: block;
+  }
+  .header-hide {
+    transform: translate(0px, -300px);
+    position: absolute;
+    transition: 0.5s;
+  }
+  .header {
+    position: absolute;
+    transition: transform 0.3s ease-in;
+    height: auto;
+  }
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+  }
+  .menu {
+    display: flex;
+    flex-direction: column;
+  }
+  .menu li {
+    margin: 2px 0px;
+  }
+  .menu a {
+    display: flex;
+  }
+}
